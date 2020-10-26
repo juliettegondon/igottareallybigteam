@@ -1,13 +1,12 @@
 let mysql = require("mysql");
 let inquirer = require("inquirer");
-let util = require("util");
 let consoletable= require("console.table");
 let connection = mysql.createConnection({
     host: "localhost",
-    port: 8080,
+    port: 3306,
     user: "root",
-    password:" ",
-    database: " ",
+    password:"juliette",
+    database: "employees_db",
 });
 
 //create connection.connect
