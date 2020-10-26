@@ -1,0 +1,20 @@
+{
+  "name": "igottareallybigteam",
+  "version": "1.0.0",
+  "description": "employee tracker hw12",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliettegondon/igottareallybigteam.git"
+  },
+  "author": "Juliette Gondon <juliettegondon@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliettegondon/igottareallybigteam/issues"
+  },
+  "homepage": "https://github.com/juliettegondon/igottareallybigteam#readme"
+}

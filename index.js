@@ -10,6 +10,10 @@ let connection = mysql.createConnection({
 });
 
 //create connection.connect
+
+connection.connect((err) => {
+    if (err) throw err;
+});
 //use inquirer to prompt user
 // what would you like to do?
 // view all employees
