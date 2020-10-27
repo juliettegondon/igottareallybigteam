@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/juliettegondon/igottareallybigteam/issues"
   },
-  "homepage": "https://github.com/juliettegondon/igottareallybigteam#readme"
+  "homepage": "https://github.com/juliettegondon/igottareallybigteam#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "mysql": "^2.18.1"
+  }
 }
