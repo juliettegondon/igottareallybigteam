@@ -15,8 +15,9 @@ let connection = mysql.createConnection({
 
 connection.connect((err) => {
     if (err) throw err;
-    console.log("Connection successful! ID: " + connection.threadId);
-    // initialize CLI app! 
+    console.log("Connection successful! ID: " + connection.threadId + "\n");
+    
+// initialize CLI app! 
     init();
  });
 
@@ -26,32 +27,39 @@ function init(){
     type: "list",
     name: "init",
     message: "What would you like to do",
-    choices: ["View All Employees", "View All Departments", "View All Roles"/*  ,
-    'Add Employee', 'Add Department', 'Add Role', 'Update Employee Role', 'Exit Screen' */]
+    choices: ["View All Employees", "View All Departments", "View All Roles", "Quit Application"/*  ,
+    'Add Employee', 'Add Department', 'Add Role', 'Update Employee Role'*/]
 }).then((answer) => {
     switch (answer.choices) { 
         //add breaks when done writing functions
         case "View All Employees":
+                console.log("VIEW EMPLOYEES:");
                 viewEmployees();
+                break;
        case "View All Departments":
+                console.log("VIEW DEPARTMENTS:");
                 viewDepartments();
+                break;
         case "View All Roles":
+                console.log("VIEW ROLES:");
                 viewRoles();
-        /* case "Add Employee":
+                break;
+        case "Quit Application": 
+                console.log("Goodbye");
+                connection.end();
+       /*  case "Add Employee":
             addEmployee();
         case "Add Department":
             addDepartment();
         case "Add Role":
             addRole();
         case "Update Employee Role":
-             update();
-        case "Exit Screen": 
-                connection.end();*/
+             update(); */
     }
 });
 // create functions for each possible inq answer
 function viewEmployees(){
-    connection.query("SELECT * FROM employee",function (err, res) {
+        connection.query("SELECT * FROM employee",function (err, res) {
         if (err) throw err;
         console.table(res);
         console.log(cTable);
@@ -75,9 +83,11 @@ function viewRoles(){
 
 /* PSEUDOCODING!!!
 
-functions not yet tested & subject to change
-function addEmployee(); use inquirer.prompt to input firstname, lastname, and role. 
-setup a mysql connection.query to insert info into employee table 
+// functions not yet tested & subject to change
+function addEmployee(); 
+
+// use inquirer.prompt to input firstname, lastname, and role. 
+// setup a mysql connection.query to insert info into employee table 
 inquirer.prompt({
     type: "input",
     name: "addEmployeeRole",
@@ -93,16 +103,18 @@ inquirer.prompt({
     message: "What is the employee's last name?"
     });
     
-function addDepartment(); use inquirer.prompt to input departmentname. 
-setup a mysql connection.query to insert info into department table 
+function addDepartment(); 
+// use inquirer.prompt to input departmentname. 
+// setup a mysql connection.query to insert info into department table 
 inquirer.prompt({
     type: "input",
     name: "addDepartmentName",
     message: "What is the new department called?"
 });
 
-function addRole(); use inquirer.prompt to input title and salary. 
-setup a mysql connection.query to insert info into role table 
+function addRole(); 
+// use inquirer.prompt to input title and salary. 
+// setup a mysql connection.query to insert info into role table 
 inquirer.prompt({
     type: "input",
     name: "addtitle",
@@ -113,8 +125,9 @@ inquirer.prompt({
     message: "What is the salary of this role?"
 });
 
-function update(); use inquirer.prompt to have user select employee name, return employee and role . 
-setup a mysql connection.query to insert info into role ID 
+function update(); 
+// use inquirer.prompt to have user select employee name, return employee and role . 
+// setup a mysql connection.query to insert info into role ID 
 inquirer.prompt({
     type: "list",
     name: "updateEmployee",
