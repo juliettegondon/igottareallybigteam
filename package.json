@@ -2,10 +2,10 @@
   "name": "igottareallybigteam",
   "version": "1.0.0",
   "description": "employee tracker hw12",
-  "main": "main.js",
+  "main": "employeeDBconnection.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node employeeDBconnection.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/juliettegondon/igottareallybigteam#readme",
   "dependencies": {
+    "ascii-art": "^2.5.0",
     "console.table": "^0.10.0",
+    "figlet": "^1.5.0",
     "mysql": "^2.18.1"
   }
 }
