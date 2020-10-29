@@ -21,6 +21,8 @@
     "ascii-art": "^2.5.0",
     "console.table": "^0.10.0",
     "figlet": "^1.5.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "yargonaut": "^1.1.4",
+    "yargs": "^16.1.0"
   }
 }
