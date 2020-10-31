@@ -1,6 +1,8 @@
 # igottareallybigteam
 and they need some really big rings
 
+https://drive.google.com/file/d/18dX7800fC0GORrDAgzYn_sY4GUjVZ9NH/view
+
 ## MySQL Homework: Employee Tracker
 
 This command line application uses node, inquirer, and MySQL to explore a database that houses information on the employees of a company, their roles, and the departments they belong to. Within the command line
